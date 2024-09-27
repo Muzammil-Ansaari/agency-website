@@ -47,7 +47,7 @@ h2 {
 }
 
 h3 {
-    font-size: 27px;
+    font-size: 30px;
 }
 
 h4 {
@@ -60,6 +60,11 @@ h5 {
 
 h6 {
     font-size: 16px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--theme-color-2);
 }
 
 main {
@@ -105,6 +110,8 @@ nav {
 .menu-items ul li a:hover {
     color: var(--theme-color-2);
 }
+
+/* ============== NAVBAR END =============== */
 
 /* ============== HOME =============== */
 
@@ -201,6 +208,8 @@ nav {
     color: var(--theme-color-1);
 }
 
+/* ============ HOME END =============== */
+
 /* ============ ABOUT US =============== */
 
 #about-us {
@@ -209,28 +218,485 @@ nav {
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 8% 4%;
+    padding: 6% 4%;
     /* background-color: saddlebrown; */
 }
 
 #about-us-left {
-    width: 52%;
+    width: 50%;
     height: 100%;
     /* background-color: rgb(96, 243, 12); */
 }
 
+#about-us-left h3 {
+    text-transform: capitalize;
+    color: var(--theme-color-1);
+    margin-bottom: 20px;
+}
+
+#about-us-left h3 span {
+    color: var(--theme-color-2);
+}
+
+#about-us-left p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.section-btn {
+    border-color: var(--theme-color-1);
+    border-radius: 0;
+    text-transform: uppercase;
+    color: var(--theme-color-1);
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.section-btn:hover {
+    color: var(--theme-color-white);
+    background-color: var(--theme-color-1);
+}
+
 #about-us-right {
-    width: 44%;
+    width: 40%;
     height: 100%;
     /* background-color: wheat; */
 }
 
 #about-us-right .mask-img {
-    width: 85%;
+    width: 90%;
     mask-image: url(assets/mask-shape.png);
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center center;
     background-size: cover;
+    overflow: hidden;
+    position: relative;
     /* background-color: saddlebrown; */
 }
+
+#about-us-right .shape {
+    position: absolute;
+    width: 10%;
+    top: 15%;
+    right: 12%;
+    z-index: 2;
+}
+
+#about-us-right .mask-img img {
+    animation: zoom-in-out 5s ease-in-out infinite;
+}
+
+@keyframes zoom-in-out {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ============ ABOUT US END =============== */
+
+/* ============ SERVICES =============== */
+
+#services {
+    width: 100%;
+    /* height: 100%; */
+    background-color: #1A1714;
+    padding: 6% 4%;
+    text-align: center;
+}
+
+.section-heading {
+    color: var(--theme-color-1);
+}
+
+.section-para {
+    color: var(--theme-color-white);
+    opacity: 0.7;
+}
+
+.service-cards {
+    /* background-color: red; */
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.serv-card {
+    width: 300px;
+    height: 320px;
+    background-color: var(--theme-color-white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* justify-content: center; */
+    padding: 3% 2% 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+.serv-card i {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.serv-card h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.serv-card .circle {
+    width: 10px;
+    height: 10px;
+    background-color: var(--theme-color-1);
+    border-radius: 50%;
+}
+
+.serv-card p {
+    line-height: 1.5;
+}
+
+.serv-card:hover {
+    scale: 1.02;
+
+}
+
+.serv-card:hover i {
+    color: var(--theme-color-1);
+}
+
+.serv-card:hover h4 {
+    color: var(--theme-color-1);
+}
+
+/* ============ SERVICES END =============== */
+
+/* ============ PROJCETS =============== */
+
+#projects {
+    width: 100%;
+    height: 100%;
+    background-color: #fcfcfc;
+    padding: 6% 4%;
+    text-align: center;
+}
+
+#projects p {
+    color: var(--theme-color-2);
+}
+
+.projects-cards {
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: saddlebrown; */
+    display: flex;
+    gap: 65px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.proj-card {
+    width: 380px;
+    height: 380px;
+    border-radius: 10px;
+    background: url('assets/asset\ 7.webp');
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+}
+
+.proj-card:nth-child(2) {
+    background: url('assets/asset\ 8.webp');
+    background-size: cover;
+}
+
+.proj-card:nth-child(3) {
+    background: url('assets/asset\ 9.webp');
+    background-size: cover;
+}
+
+.proj-card-content-box {
+    width: 100%;
+    /* height: 100px; */
+    background-color: var(--theme-color-white);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -70px;
+    right: -30px;
+    text-align: start;
+    padding: 5% 5%;
+    transition: all 0.3s ease;
+}
+
+.proj-card-content-box p {
+    margin-bottom: 10px;
+}
+
+.proj-card-content-box a {
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.proj-card-content-box a span {
+    margin-right: 5px;
+}
+
+.proj-card:hover .proj-card-content-box {
+    box-shadow: 0 0 100px var(--theme-color-1);
+}
+
+/* ============ PROJECTS END =============== */
+
+/* ============ TEAMS =============== */
+
+#teams {
+    width: 100%;
+    height: 100%;
+    padding: 6% 4%;
+    text-align: center;
+}
+
+#teams p {
+    color: var(--theme-color-2);
+}
+
+.team-cards {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.person-card {
+    width: 310px;
+    height: 470px;
+    /* background-color: red; */
+    border-radius: 10px;
+    /* background: url('assets/asset\ 10.webp'); */
+    /* background-size: cover; */
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+    text-align: start;
+    cursor: pointer;
+}
+
+.person-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease all;
+    scale: 1;
+}
+
+.person-card::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: linear-gradient(180deg, rgba(18, 18, 19, 0) 0%, #121213 100%);
+}
+
+.person-card-content {
+    /* padding: 6%; */
+    /* background-color: slateblue; */
+    position: absolute;
+    bottom: 0px;
+    z-index: 5;
+    transition: 0.5s ease all;
+}
+
+.person-card-content h5 {
+    color: var(--theme-color-white);
+}
+
+.person-card-content p {
+    color: var(--theme-color-white) !important;
+    opacity: 0;
+    transition: 0.5s ease all;
+}
+
+.person-social-icons {
+    position: relative;
+    left: -15px;
+    z-index: 5;
+    display: flex;
+    /* background-color: saddlebrown; */
+    gap: 20px;
+    flex-direction: column;
+    width: fit-content;
+    opacity: 0;
+    transition: 0.5s ease all;
+}
+
+.person-social-icons i {
+    padding: 14px;
+    font-size: 18px;
+    background-color: var(--theme-color-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 30px; */
+    transition: 0.5s ease all;
+}
+
+.person-social-icons i:hover {
+    color: var(--theme-color-1);
+}
+
+.person-card:hover img {
+    scale: 1.12;
+}
+
+.person-card:hover .person-card-content {
+    bottom: 20px;
+}
+
+.person-card:hover p {
+    opacity: 1;
+}
+
+.person-card:hover .person-social-icons {
+    opacity: 1;
+    left: 0;
+}
+
+/* ============ TEAMS END =============== */
+ 
+/* ============ CONTACT US =============== */
+
+#contact-us {
+    width: 100%;
+    /* height: 100%; */
+    background-color: #fcfcfc;
+    display: flex;
+    padding: 6% 4%;
+}
+
+.contact-us-left {
+    width: 50%;
+    height: 100%;
+    /* background-color: seagreen; */
+}
+
+.contact-us-left h3 {
+    font-weight: 800;
+    margin-bottom: 80px;
+}
+
+.contact-box-container {
+    /* background-color: yellow; */
+    padding-left: 50px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 120px;
+}
+
+.contact-box:last-child {
+    margin-bottom: 0;
+}
+
+.contact-box i {
+    font-size: 36px;
+    color: var(--theme-color-1);
+}
+
+.contact-box p {
+    font-size: 18px;
+}
+
+.contact-us-right {
+    width: 50%;
+    height: 100%;
+    /* background-color: slategray; */
+}
+
+.contact-us-right p {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input {
+    padding: 15px;
+    font-size: 17px;
+    border: 1px solid rgb(201, 198, 198);
+    outline: none;
+}
+
+.contact-form input:focus {
+    border-color: var(--theme-color-1);
+}
+
+.contact-form textarea {
+    padding: 15px;
+    font-size: 17px;
+    border: 1px solid rgb(201, 198, 198);
+    outline: none;
+}
+
+.contact-form textarea:focus {
+    border-color: var(--theme-color-1);
+}
+
+.contact-form .input-btn {
+    background-color: var(--theme-color-1);
+    color: var(--theme-color-white);
+    align-self: flex-end;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 1px solid var(--theme-color-1);
+}
+
+.contact-form .input-btn:hover {
+    color: var(--theme-color-1);
+    border: 1px solid var(--theme-color-1);
+    background-color: transparent;
+}
+
+
+/* ============ CONTACT US END =============== */
+
+/* ============ FOOTER START =============== */
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: springgreen;
+}
+
+/* ============ FOOTER END =============== */
